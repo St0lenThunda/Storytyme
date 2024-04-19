@@ -9,48 +9,7 @@
       rel="stylesheet"
       href="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.css"
     />
-    <style>
-      h1 {
-        text-align: center;
-      }
-
-      p {
-        margin: auto;
-        padding: .5rem;
-        width: 75vw;
-      }
-      
-      div>img {
-        border: 1px solid #ddd;
-        padding: 10px;
-      }
-
-      .tag {
-        font-style: italic;
-        font-size: 1.5em;
-      }
-
-      .container {
-        margin:auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 5px 5px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "welcome logins";
-        width: 90vw;
-        height: 90vh;
-      }
-
-      .welcome {
-        grid-area: welcome;
-      }
-
-      .logins {
-        grid-area: logins;
-      }
-    </style>
+   <link rel="stylesheet" href="index.css">
   </head>
 
   <body>
@@ -84,7 +43,7 @@
       document.addEventListener( 'DOMContentLoaded', function () {
         // FirebaseUI config.
         var uiConfig = {
-          signInSuccessUrl: './success.html',
+          signInSuccessUrl: './intake.html',
           signInOptions: [
             // Leave the lines as is for the providers you want to offer your users.
             firebase.auth.EmailAuthProvider.PROVIDER_ID,
