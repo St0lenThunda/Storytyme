@@ -5,7 +5,7 @@
   const body = doc.body
   const lightSwitch = doc.getElementById( 'lights-toggle' )
   /* global ScrollReveal */
-  const sr = window.sr = ScrollReveal()
+  const sr = window.sr = ScrollReveal() 
 
   rootEl.classList.remove( 'no-js' )
   rootEl.classList.add( 'js' )
@@ -21,7 +21,7 @@
 
   function toggleLogins () {
     let logins = doc.getElementsByClassName( 'logins' ),
-      heroMedia = doc.getElementsByClassName( 'hero-media-container' )    
+      heroMedia = doc.getElementsByClassName( 'hero-media-images' )    
     toggleElementVisibility( heroMedia)
     toggleElementVisibility(logins)
       
