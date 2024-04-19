@@ -57,17 +57,25 @@
   }
 
   function checkLights () {
+    var isDark = localStorage.getItem( "is-dark" );
+
     let labelText = lightSwitch.parentNode.querySelector( '.label-text' )
-    if ( lightSwitch.checked ) {
+    lightSwitch.checked && isDark ? setDark( labelText ) : setLight( labelText )
+  }
+
+  function setDark ( labelText ) {
+    localStorage.setItem( "is-dark", "false" );
       body.classList.remove( 'lights-off' )
       if ( labelText ) {
         labelText.innerHTML = 'Dark'
       }
-    } else {
+  }
+  function setLight ( labelText ) {
+    // Set the "is-dark" variable in localStorage
+    localStorage.setItem( "is-dark", "true" );
       body.classList.add( 'lights-off' )
       if ( labelText ) {
         labelText.innerHTML = 'Light'
       }
-    }
   }
 }() )

@@ -8,382 +8,176 @@
       content="width=device-width, initial-scale=1.0"
     >
 
-    <link rel="stylesheet" href="./static/index.css">
+    <link
+      rel="stylesheet"
+      href="./static/css/index.css"
+    >
+    <link
+      rel="stylesheet"
+      href="./static/css/intake.css"
+    >
     <title>Child Information Form</title>
-    <style>
-      
 
-      .form-container {  
-        margin:10px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 40px;
-        max-width: 500px;
-        width: 80%;
-      }
-
-      h1 {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-
-      input[type="text"],
-      input[type="file"],
-      select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-
-      select {
-        appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 12px top 50%;
-        background-size: 12px;
-        padding-right: 30px;
-      }
-
-      input[type="file"] {
-        padding: 8px;
-      }
-
-      input[type="file"]::-webkit-file-upload-button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      input[type="file"]::-webkit-file-upload-button:hover {
-        background-color: #0056b3;
-      }
-
-      div.image-thumb-container {
-        position: relative;
-      }
-
-
-      .close-btn {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        color: darkred;
-        border-radius: 50%;
-      }
-
-      .image-preview {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
-        padding: 10px;
-      }
-
-      .image-thumb:nth-child(1) {
-        display: block;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        align-self: auto;
-        order: 0;
-      }
-
-      .image-thumb:nth-child(2) {
-        display: block;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        align-self: auto;
-        order: 0;
-      }
-
-      .image-thumb:nth-child(3) {
-        display: block;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        align-self: auto;
-        order: 0;
-      }
-
-      .image-thumb:nth-child(3n-1) {
-        margin-left: 2%;
-        margin-right: 2%;
-      }
-
-      .image-thumb {
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-        box-sizing: content-box;
-        border: none;
-        border-radius: 10px;
-        font: normal 16px/1 "Times New Roman", Times, serif;
-        color: black;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        -webkit-box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.4);
-        box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.4);
-        height: 120px;
-        width: 120px;
-        margin-bottom: 2%;
-      }
-
-      .submit-btn {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .submit-btn:hover {
-        background-color: #0056b3;
-      }
-
-      /* Animations */
-      @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animated {
-        animation-duration: 0.5s;
-        animation-fill-mode: both;
-        animation-timing-function: ease-out;
-      }
-    </style>
   </head>
 
   <body class="is-boxed">
     <div class="body-wrap boxed-container">
-<header class="site-header">
-  <div class="container">
-    <div class="site-header-inner">
-      <div class="lights-toggle">
-        <input
-          id="lights-toggle"
-          type="checkbox"
-          name="lights-toggle"
-          class="switch"
-          checked="checked"
-        >
-        <label
-          for="lights-toggle"
-          class="text-xs"
-        ><span><span class="label-text">Dark</span> Mode</span></label>
-      </div>
-      <div class="brand header-brand">
-        <h1 class="m-0">
-          <a href="#">
-            <img
-              class="header-logo-image asset-light"
-              src="./static/images/logo-light.svg"
-              alt="Logo"
-            >
-            <img
-              class="header-logo-image asset-dark"
-              src="./static/images/logo-dark.svg"
-              alt="Logo"
-            >
-          </a>
-        </h1>
-      </div>
+      <header class="site-header">
+        <div class="intake-container">
+          <div class="site-header-inner">
+            <div class="lights-toggle">
+              <input
+                id="lights-toggle"
+                type="checkbox"
+                name="lights-toggle"
+                class="switch"
+                checked="checked"
+              >
+              <label
+                for="lights-toggle"
+                class="text-xs"
+              ><span><span class="label-text">Dark</span> Mode</span></label>
+            </div>
+            <div class="brand header-brand">
+              <h1 class="m-0">
+                <a href="#">
+                  <img
+                    class="header-logo-image asset-light"
+                    src="./static/images/logo-light.svg"
+                    alt="Logo"
+                  >
+                  <img
+                    class="header-logo-image asset-dark"
+                    src="./static/images/logo-dark.svg"
+                    alt="Logo"
+                  >
+                </a>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="form-container animated">
+        <div class="container">
+          <div class="tab-status">
+            <span class="tab active">1</span>
+            <span class="tab">2</span>
+            <span class="tab">3</span>
+            <span class="tab">4</span>
+            <span class="tab">5</span>
+      
+          </div>
+          <form action="#">
+            <div role="tab-list">
+              <div
+                role="tabpanel"
+                id="childName"
+                class="tabpanel"
+              >
+                <h3>What is your childs name?</h3>
+                <input type="text"
+                  name="childName"
+                  class="form-input"
+                  required
+                ></i>
+              </div>
+              <div
+                role="tabpanel"
+                id="gender"
+                class="tabpanel hidden"
+              >
+                <h3>Gender?</h3>
+                <select
+                  class="form-input"
+                  id="gender"
+                  name="gender"
+                  required
+                >
+                  <option
+                    value=""
+                    disabled
+                    selected
+                  >Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div
+                role="tabpanel"
+                id="apperance"
+                class="tabpanel hidden"
+              >
+                <h3>Apperance</h3>
+                <textarea
+                  name="apperance"
+                  class="form-input"
+                  placeholder="hair, skin, eyes, etc."
+                ></textarea>
+              </div>
+              <div
+                role="tabpanel"
+                id="interest"
+                class="tabpanel hidden"
+              >
+                <h3>Apperance</h3>
+                <select
+                  class="form-input"
+                  name="interest"
+                  required
+                >
+                  <option
+                    value=""
+                    disabled
+                    selected
+                  >Select Interest</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Art">Art</option>
+                  <option value="Music">Music</option>
+                  <option value="Science">Science</option>
+                </select>
+              </div>
+              <div
+                role="tabpanel"
+                id="images"
+                class="tabpanel hidden"
+              >
+                <h3>Upload Images (max 3)</h3>
+                <input
+                  type="file"
+                  id="imageUpload"
+                  name="imageUpload[]"
+                  accept="image/*"
+                  class="form-input"
+                  multiple
+                  required
+                >
+                <div class="image-preview"></div>
+              </div>
+              </div>
+              <div class="pagination">
+                <a
+                  class="btn hidden"
+                  id="prev"
+                >Previous</a>
+                <a
+                  class="btn"
+                  id="next"
+                >Continue</a>
+              <button
+                role="submit"
+                class="btn btn-submit hidden"
+                id="submit"
+              >Submit</button>
+            </div>
+          </form>
+        </div>
+      </main>
+      
     </div>
-  </div>
-</header>
-    <main
-      class="form-container animated"
-    >
-      <h1 class="hero-title mt-0">Child Information Form</h1>
-      <form
-        id="childForm"
-        enctype="multipart/form-data"
-      >
-        <input
-          type="hidden"
-          name="form_id"
-          value="child_info_form"
-        >
-        <div class="form-group">
-          <label for="childName">Child's Name</label>
-          <input
-            type="text"
-            id="childName"
-            name="childName"
-            required
-          >
-        </div>
-        <div class="form-group">
-          <label for="gender">Gender</label>
-          <select
-            id="gender"
-            name="gender"
-            required
-          >
-            <option
-              value=""
-              disabled
-              selected
-            >Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="appearance">Appearance</label>
-          <input
-            type="text"
-            id="appearance"
-            name="appearance"
-            placeholder="hair, skin, eyes, etc."
-            required
-          >
-        </div>
-        <div class="form-group">
-          <label for="imageUpload">Upload Images (Max 3)</label>
-          <input
-            type="file"
-            id="imageUpload"
-            name="imageUpload[]"
-            accept="image/*"
-            multiple
-            required
-          >
-          <div class="image-preview"></div>
-        </div>
-        <div class="form-group">
-          <label for="interest">Interest</label>
-          <select
-            id="interest"
-            name="interest"
-            required
-          >
-            <option
-              value=""
-              disabled
-              selected
-            >Select Interest</option>
-            <option value="Sports">Sports</option>
-            <option value="Art">Art</option>
-            <option value="Music">Music</option>
-            <option value="Science">Science</option>
-          </select>
-        </div>
-        <button
-          type="button"
-          id="submitBtn"
-          class="submit-btn"
-        >Submit</button>
-      </form>
-    </main>
-</div>
-<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.js"></script>
-<script src="./static/js/main.js"></script>
-    <script>
-      document.addEventListener( 'DOMContentLoaded', function () {
-        document.getElementById( 'submitBtn' ).addEventListener( 'click', function () {
-          var form = document.getElementById( 'childForm' );
-          var formData = new FormData( form );
-
-          fetch( 'YOUR_CLOUD_FUNCTION_ENDPOINT', {
-            method: 'POST',
-            body: formData
-          } )
-            .then( response => response.json() )
-            .then( data => {
-              console.log( data );
-              // Optionally, redirect user or show success message
-            } )
-            .catch( error => {
-              console.error( 'Error:', error );
-              // Optionally, show error message to user
-            } );
-        } );
-
-        let file_input = document.querySelector( '#imageUpload' );
-        let image_preview = document.querySelector( '.image-preview' );
-
-        const handle_file_preview = ( e ) => {
-          let files = e.target.files;
-          let length = files.length;
-
-          for ( let i = 0; i < length; i++ ) {
-            let imgContainer = document.createElement( 'div' ),
-              btnClose = document.createElement( 'button' )
-            image = document.createElement( 'img' );
-
-            imgContainer.id = `image-container-${i}`;
-            btnClose.textContent = 'x'
-            btnClose.addEventListener( 'click', ( e ) => {
-              //debugger
-              idx = Number( e.target.parentElement.id.split( '-' )[2] );
-              // Construct a new DataTransfer object
-              const dt = new DataTransfer();
-
-              // Add files to the DataTransfer object, excluding the first one (index 0)
-              for ( let file of file_input.files ) {
-                if ( file !== file_input.files[idx] ) {
-                  dt.items.add( file );
-                }
-              }
-
-              // Update the input's files with the modified list
-              file_input.files = dt.files;
-              e.target.parentNode.parentNode.removeChild( e.target.parentNode )
-            } );
-            imgContainer.classList.add( 'image-thumb-container' );
-            btnClose.classList.add( 'close-btn' );
-            image.classList.add( 'image-thumb' )
-            // use the DOMstring for source
-            image.src = window.URL.createObjectURL( files[i] );
-            imgContainer.appendChild( btnClose );
-            imgContainer.appendChild( image );
-            image_preview.appendChild( imgContainer );
-          }
-        }
-
-        file_input.addEventListener( 'change', handle_file_preview );
-
-      } );
-    </script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.js"></script>
+    <script src="./static/js/main.js"></script>
+    <script src="./static/js/intake.js"></script>
 
   </body>
 
