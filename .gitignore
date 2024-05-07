@@ -64,3 +64,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# firebase service account
+firebase/serviceAccount.json
+
+# Local workspace
+storyTyme.code-workspace

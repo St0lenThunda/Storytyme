@@ -1566,10 +1566,10 @@ blockquote {
       z-index: 0
     }
   
-    .hero-media img,
+    /* .hero-media img,
     .hero-media svg {
       max-width: none
-    }
+    } */
   
     .header-illustration-image {
       display: block;
